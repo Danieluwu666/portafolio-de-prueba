@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{               /*Declarar variables css*/
+
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#22D4FD;
+    --color-hover:#272727;
+
+    --fuente-montserrat:"Montserrat", sans-serif;
+    --fuente-krona:"Krona One", sans-serif; 
+
+}
+*{  /*el * indica que se aplica a todos los elementos del documento*/
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    margin: 0px;
+    border: 0px solid var(--color-primario);
+    padding: 0px;
+}
+
+
+
+body{
+
+background-color:var(--color-primario);
+color:var(--color-secundario);
+box-sizing:border-box;
+
+}
+.header{
+padding: 2% 0% 0% 15%; /*top righ bottom left*/
+
+}
+.header__menu{
+    display: flex;
+    gap:80px;
+
+
+}
+.header__menu__link{
+font-family:var(--fuente-montserrat);
+font-size: 1.5rem;
+font-weight: 600;
+color: var(--color-terciario);
+text-decoration: none;
+}
+
+.presentacion{
+    display:flex;                        /*flex box para manejar espacios d elos elementos*/
+    align-items: center;
+    padding: 5% 15%;                    /*vertical, horizontal */
+    justify-content: space-between;
+    gap:82px;
+}
+.presentacion__contenido{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);        /*fuente*/
+}
+
+.titulo-destaque{
+    color:var(--color-terciario);
+}
+
+span{                                /*Strong deja negrilla mientras que span no*/
+    color:var(--color-terciario);
+    border:2px solid var(--color-terciario);           /*borde fuera del texto dentro del span, color y grosor  */
+    padding:2px;                        /* distancia del texto al borde*/
+}
+
+.presentacion__contenido__texto{
+    font-family: var(--fuente-montserrat);
+    font-size:1.5rem;
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between  ;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center; 
+
+}
+.presentacion__enlaces__subtitulo{
+font-family: var(--fuente-krona);
+font-size: 1.5rem;
+font-weight: 400;
+
+    
+}
+.presentacion__enlaces__link{
+width: 50%;
+border: 2px solid var(--color-terciario);           /*hay varios tipos de bordes*/
+text-align: center; /*centrar el tesxto en los botones*/
+padding: 21.5px 0;          
+border-radius: 8px;
+font-family: var(--fuente-montserrat);
+font-size: 1.5rem;
+font-weight: 600;  /*semibold*/
+text-decoration: none; /*quitarle las decoraciones al texto*/
+color:var(--color-secundario);
+display: flex;
+justify-content: center;
+gap: 10px;
+
+}
+
+.presentacion__enlaces__link:hover{  /*hover es propiedad para cambiar de color cuando se pasa el raton por encima*/
+
+    background-color: var(--color-hover);
+    color:var(--color-terciario);
+    
+}
+.presentacion__imagen{
+
+width: 50%;
+
+}
+.footer{
+    background-color:var(--color-terciario);
+    padding: 24px;
+    color:var(--color-primario);
+    text-align: center;
+    font-family:var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width:1200px){  /*@media(min-width:400px) and (max-width:1200px)*/    /*media querie, comportamiento que va a atener cuando la pantalla tenga un ancho de 1200*/
+
+
+.header{
+    padding: 10%;       
+}
+.header__menu{
+    justify-content: center;
+}
+
+  
+.presentacion{              /*no necesito agregar display flex. porque en la calse de arriba ya estaba un display flex*/
+    flex-direction: column-reverse;
+    padding: 5%;
+}
+.presentacion__contenido{
+
+width: auto;  /*también puedo usar el 100%*/
+
+}
+
+
+
+}
